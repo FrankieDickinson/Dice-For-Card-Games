@@ -1,7 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_test"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-</LinearLayout>
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btnRollTop"
+            android:textSize="50sp"
+            android:text="Roll"
+            android:scaleY="-1"
+            android:scaleX="-1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:background="@android:color/holo_blue_light" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/btnRollBottom"
+            android:textSize="50sp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="Roll"
+            android:background="@android:color/holo_red_light" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearBotButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+      
+      <ImageButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/imgBtnDiceSix"
+           android:background="@null"
+           android:src="@drawable/dicesixsmall"
+           android:adjustViewBounds="true"
+           android:maxWidth="50sp"
+           android:maxHeight="50sp"
+           android:scaleType="fitCenter" />
+      <Space
+        android:layout_width="15sp"
+           android:layout_height="1dp"
+           android:layout_weight="1"
+        />
+      <ImageButton
+       android:layout_width="100sp"
+       android:layout_height="75sp"
+       android:id="@+id/imgBtnCoin"
+       android:background="@null"
+       android:src="@drawable/coinheads"
+       android:adjustViewBounds="true"
+       android:maxWidth="70sp"
+       android:maxHeight="50sp"
+       android:scaleType="fitCenter"
+       android:layout_alignParentBottom="true"
+       android:paddingBottom="10sp"
+            />
+        
+      <Space
+       android:layout_width="15sp"
+          android:layout_height="1dp"
+          android:layout_weight="1"
+        />
+        <ImageButton
+            android:layout_width="70sp"
+            android:layout_height="70sp"
+            android:id="@+id/imgBtnDiceTwenty"
+            android:background="@null"
+            android:src="@drawable/dice20white"
+            android:adjustViewBounds="true"
+            android:maxWidth="70sp"
+            android:maxHeight="70sp"
+            android:scaleType="fitCenter" 
+           />
+    </LinearLayout>
+</RelativeLayout>
